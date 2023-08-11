@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(206, 255, 255); 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.box {
+    text-align: center;
+    align-items: center;
+    margin: 100px auto;
+    /* height: 350px; */
+    width: 550px;
+    padding: 50px;
+    background-color:white;
+    
+}
+.email {
+    padding: 5px;
+    background-color: rgb(252, 246, 238);
+    border: none;
+    width: 300px;
+    color: rgb(121, 118, 118);
+    border-radius: 2px;
+}
+.submit {
+    padding: 5px;
+    background-color: rgb(72, 72, 235);
+    color: aliceblue;
+    border:none;
+    border-radius: 2px;
+   
+}
+.p1 {
+    font-size: 17px;
+    color: rgb(77, 76, 76);
+}
+.p2 {
+    margin: 40px;
+    font-size: 15px;
+    color: rgb(92, 92, 92);
+}
