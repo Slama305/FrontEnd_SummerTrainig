@@ -1,0 +1,35 @@
+* {
+   font-size: 25px;
+}
+p {
+    color: red;
+    text-align: center;
+}
+p + div {
+   color: black;
+   text-align: center;
+}
+#myDiv + .mainClass {
+    text-align: center;
+}
+.MYDIV2 P {
+    text-align: center;
+    color: blue;
+}
+.myClass {
+    margin: 30px;
+}
+div.span + span {
+    display: block;
+    text-align: center;
+    color: brown;
+}
+p.mainClass {
+    text-align: center;
+    color: blueviolet;
+}
+div#myDiv {
+    text-align: center;
+    color: rgb(54, 7, 42);
+    font-size: 25px;
+}
