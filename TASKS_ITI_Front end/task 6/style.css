@@ -1,0 +1,14 @@
+*{
+    padding: 0px;
+    margin: 0px;
+
+}
+div {
+    text-align: center;
+    width: 100%;
+    background-color: rgb(49, 33, 9);
+    color: aliceblue;
+    font-size: 30px;
+    
+    
+}

@@ -1,0 +1,200 @@
+*{
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+}
+header {
+
+   background-color: rgb(12, 161, 161);
+   position: fixed;
+   width: 100%;
+   top: 0px;
+   padding: 10px 50px;
+   color: aliceblue;
+   font-size: 20px;
+   z-index: 999;
+   display: flex;
+   justify-content: space-between;
+
+}
+.logo {
+   color: aliceblue;
+   text-decoration: none;
+   font-weight: 700;
+   font-size: 1.4em;
+}
+.list a{
+   text-decoration: none;
+   color: aliceblue;
+   font-size: 12px;
+   padding-left: 10px;
+   padding-right:10px; 
+}
+.list a:hover{
+   color: rgb(29, 27, 24);
+   background-color: azure;
+   border-radius: 7px;
+   
+}
+.welcome {
+    background-image: url("image-header.jpg");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: scroll; */
+    height: 400px;
+    position: absolute;
+    text-align: center;
+}
+.weAre{
+   text-align: center;
+   color: aliceblue;
+   font-size: 30px;
+   padding-top: 100px;
+   font-weight: 600;
+}
+.allcard{
+   width: 100%;
+   height: 900px;
+   background-color: rgb(250, 249, 246);
+   position: relative;
+   top: 400px;
+
+}
+.myCard {
+   width: 49.85%;
+   display: inline-block;
+   height: 450px;
+   background-color: rgb(245, 241, 237);
+   text-align: left;
+   position: absolute;
+   top: 0px;
+}
+.myCard2{
+   width: 49.85%;
+   display: inline-block;
+   height: 450px;
+   background-color: rgb(245, 240, 235);
+   text-align: left;
+   position: absolute;
+   top:450px ;
+
+}
+.one1 {
+   /* height: 450px;
+   width: 100%; */
+   right: 0px;
+}
+.imgsize {
+   height: 450px;
+   width: 100%; 
+}
+h2{
+   padding: 30px;
+   margin: 50px;
+   font-size: 50px;
+}
+.allcard p {
+   padding: 10px;
+   margin: 20px 50px;
+}
+.allcard a{
+   
+   padding: 10px;
+   margin: 20px 50px;
+   text-decoration: rgb(145, 89, 5);
+   color: black;
+   font-weight: 600;
+   
+}
+.towcard {
+   width: 100%;
+   height: 450px;
+}
+.towcard div{
+   display: inline-block;
+   text-align: center;
+   width: 49.85%;
+   height: 450px;
+   position: relative;
+   top: 400px;
+}
+.first{
+   background-image:url("image-graphic-design.jpg") ;
+}
+.second {
+   background-image: url("image-photography.jpg");
+}
+.towcard h2{
+   margin-top: 290px;
+   margin-bottom: -10px;
+}
+.towcard p{
+   margin:-5px 100px ;
+}
+.photo {
+   width: 100%;
+   height: 500px;
+   padding: 40px;
+   text-align: center
+}
+.photo div{
+   display: inline-block;
+   width: 200px;
+   height: 350px;
+   position: relative;
+   top: 400px;
+   margin: 0px 40px 0px 40px;
+   /* margin-top: 100px; */
+}
+.photo img{
+   border-radius: 30px;
+   width: 50px;
+   height: 50px;
+   margin-top: 100px;
+}
+.photo p{
+   /* margin-top: 80px; */
+   padding: 10px;
+   /* margin-bottom: 100px; */
+} 
+.photo h3{
+   margin-top: 40px;
+}
+.photo b{
+   position: relative;
+   top: 450px;
+}
+.pectuer {
+   width: 100%;
+   height: 250;
+   margin-top: 320px;
+   background-color: rgb(123, 182, 238);
+}
+.pectuer img{
+   width: 24.77%;
+   height: 250px;
+   /* margin-top: 320px; */
+
+}
+.icon {
+   width: 100%;
+   background-color: black;
+   height: 200px;
+   text-align: center;
+   margin-top: -4px;
+}
+.icon h3{
+   color: beige;
+   padding: 40px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-size: 25px;
+}
+.icon img{
+   height: 30px;
+   width: 30px;
+   border-radius: 10px;
+   margin: 20px;
+}
