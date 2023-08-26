@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clone and Change Background</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: yellow;
+      margin: 10px;
+      display: inline-block;
+      text-align: center;
+      line-height: 200px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">Click me!</div>
+
+  <script>
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    var box = document.querySelector('.box');
+    box.addEventListener('click', function() {
+  
+      var clonedBox = box.cloneNode(true);
+      
+      
+      var randomColor = getRandomColor();
+      
+      
+      clonedBox.style.backgroundColor = randomColor;
+      
+      
+      document.body.appendChild(clonedBox);
+    });
+  </script>
+</body>
+</html>

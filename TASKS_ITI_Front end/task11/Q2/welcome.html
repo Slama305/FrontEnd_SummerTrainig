@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome</title>
+<script>
+function display()
+{
+var userInfo=new URLSearchParams(window.location.search);
+var nameEmmp=userInfo.get('name');
+var emailEmp=userInfo.get('email');
+var info = document.getElementById("info");
+info.innerText = "Name: " + nameEmmp + "\nEmail: " + emailEmp;
+}
+</script>
+</head>
+
+<body onload="display()">
+  <h1>Welcome Page</h1>
+  <div id="info"></div>
+</body>
+</html>

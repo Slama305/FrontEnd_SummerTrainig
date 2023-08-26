@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Photo Gallery</title>
+  <style>
+    .slideshow-container {
+      position: relative;
+      height: 400px;
+      width: 600px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .slide {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    .slide img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .controls {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    button {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="slideshow-container">
+    <div class="slide">
+      <img src="1.jpg" alt="Image 1">
+    </div>
+    <div class="slide">
+      <img src="2.jpg" alt="Image 2">
+    </div>
+    <div class="slide">
+      <img src="3.jpg" alt="Image 3">
+    </div>
+  </div>
+   <div class="slideshow-container">
+    <div class="slide">
+      <img src="4.jpg" alt="Image 1">
+    </div>
+    <div class="slide">
+      <img src="5.jpg" alt="Image 2">
+    </div>
+    <div class="slide">
+      <img src="6.jpg" alt="Image 3">
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="prev-btn">Previous</button>
+    <button class="next-btn">Next</button>
+    <button class="slideshow-btn">Slideshow</button>
+    <button class="stop-btn">Stop Slideshow</button>
+  </div>
+
+  <script>
+    var slides = document.getElementsByClassName('slide');
+    var currentSlide = 0;
+    var slideInterval;
+
+    function showSlide(n) {
+      slides[currentSlide].style.display = 'none';
+      currentSlide = (n + slides.length) % slides.length;
+      slides[currentSlide].style.display = 'block';
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+
+    function startSlideshow() {
+      slideInterval = setInterval(nextSlide, 2000); // Change slide every 2 seconds (2000 milliseconds)
+    }
+
+    function stopSlideshow() {
+      clearInterval(slideInterval);
+    }
+
+    document.querySelector('.next-btn').addEventListener('click', nextSlide);
+    document.querySelector('.prev-btn').addEventListener('click', prevSlide);
+    document.querySelector('.slideshow-btn').addEventListener('click', startSlideshow);
+    document.querySelector('.stop-btn').addEventListener('click', stopSlideshow);
+
+    showSlide(currentSlide); // Show the initial slide
+  </script>
+</body>
+</html>
