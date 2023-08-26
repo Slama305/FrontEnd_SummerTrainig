@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Circles</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="700" height="500"></canvas>
+    <br>
+    <input type="color" id="colorPicker">
+    <button onclick="drawCircles()">Draw</button>
+    <button onclick="clearCanvas()">clear</button>
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        function drawCircles() {
+            var color = document.getElementById("colorPicker").value;
+            var radius = 30; 
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            for (var i = 0; i < 50; i++) {
+                var x = Math.random() * (canvas.width - radius * 2) + radius;
+                var y = Math.random() * (canvas.height - radius * 2) + radius;
+
+                ctx.beginPath();
+                ctx.arc(x, y, radius, 0, Math.PI * 2);
+                ctx.strokeStyle = color;
+                ctx.stroke();
+                ctx.closePath();
+            }
+        }
+
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2</title>
+</head>
+<body>
+    Red:<input type="range" id="one" min="0" max="255" oninput="changeColor()">
+    <br><br>
+    Green:<input type="range" id="two" min="0" max="255" oninput="changeColor()">
+    <br><br>
+    Blue:<input type="range" id="three" min="0" max="255" oninput="changeColor()">
+<h2 id="head">Hello World!</h2>
+<script>
+var red=0;
+var green=0;
+var blue=0;
+function changeColor()
+{
+red=document.getElementById("one").value;
+green=document.getElementById("two").value;
+blue=document.getElementById("three").value;
+document.getElementById("head").style.color="rgb("+red+","+green+","+blue+")";
+}
+
+
+</script>
+
+</body>
+</html>

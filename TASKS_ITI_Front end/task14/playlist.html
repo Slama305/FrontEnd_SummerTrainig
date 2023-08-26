@@ -1,0 +1,142 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <style>
+        .music-player {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .song-image {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .controls button {
+            margin: 0 10px;
+        }
+
+        .volume-slider,
+        .seek-slider {
+            width: 200px;
+        }
+
+        table {
+            width: 400px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="music-player">
+        <img class="song-image" id="songImage" >
+        <div class="controls">
+            <button onclick="play()">Play</button>
+            <button onclick="pause()">Pause</button>
+            <button onclick="closePlayer()">Close</button>
+        </div>
+        <input class="volume-slider" type="range" min="0" max="100" value="50" oninput="setVolume(this.value)">
+        <input class="seek-slider" type="range" min="0" max="100" value="0" oninput="setSeek(this.value)">
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Artist</th>
+                    <th>Duration</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Song 1</td>
+                    <td>Artist 1</td>
+                    <td>0:30</td>
+                    <td><button onclick="loadSong('song1.mp3', 'img1.png')">Play</button></td>
+                </tr>
+                <tr>
+                    <td>Song 2</td>
+                    <td>Artist 2</td>
+                    <td>0:10</td>
+                    <td><button onclick="loadSong('song2.mp3', 'img2.jpeg')">Play</button></td>
+                </tr>
+                <tr>
+                    <td>Song 3</td>
+                    <td>Artist 3</td>
+                    <td>0:15</td>
+                    <td><button onclick="loadSong('song3.mp3', 'img3.jpeg')">Play</button></td>
+                </tr>
+              
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let audioPlayer = new Audio();
+        let volumeSlider = document.querySelector('.volume-slider');
+        let seekSlider = document.querySelector('.seek-slider');
+        let songImage = document.getElementById('songImage');
+        let updateSeekInterval;
+
+        function loadSong(songUrl, imageUrl) {
+            audioPlayer.src = songUrl;
+            songImage.src = imageUrl;
+            seekSlider.value = 0;
+           
+            
+        }
+
+        function play() {
+            audioPlayer.play();
+           
+        }
+
+        function pause() {
+            audioPlayer.pause();
+           
+        }
+
+        function closePlayer() {
+          audioPlayer.load();
+            audioPlayer.pause();
+            
+         
+        }
+     audioPlayer.addEventListener("input", function () {
+   
+        audioPlayer.currentTime =audioPlayer.volume;
+});
+
+audio.addEventListener("timeupdate", function () {
+   audioPlayer.volume = audio.currentTime
+});
+  
+  
+  
+    </script>
+</body>
+</html>

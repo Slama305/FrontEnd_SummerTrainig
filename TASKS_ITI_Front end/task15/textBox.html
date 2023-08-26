@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>T1</title>
+  <script src="jquery-3.7.0.js"></script>
+  
+</head>
+<body>
+  <div>
+    <input type="text" id="textbox">
+    <button id="addButton">Add</button>
+  </div>
+  <div id="output"></div>
+  <script>
+   
+      $('#addButton').click(function() {
+        var text = $('#textbox').val();
+        if (text !== '') {
+          var newItem = $('<div class="item">  ' + text + ' <button class="deleteButton"> delete</button></div>');
+          $(newItem).children('.deleteButton').click(function() {
+            $(this).parent('.item').remove();
+          });
+          $('#output').append(newItem);
+          $('#textbox').val('');
+        }
+      });
+   
+  </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="jquery-3.7.0.js"></script>
+  
+  <title>T2</title>
+  <style>
+  
+    ul.tabs {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #f1f1f1;
+    }
+
+    ul.tabs li {
+      float: left;
+    }
+
+    ul.tabs li a {
+      display: block;
+      color: #000;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    ul.tabs li a:hover {
+      background-color: #ddd;
+    }
+
+    ul.tabs li a.active {
+      background-color: #ccc;
+    }
+    .tab-content {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      padding: 20px;
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="tabs">
+    <ul class="tabs">
+      <li><a href="#tab1">Tab 1</a></li>
+      <li><a href="#tab2">Tab 2</a></li>
+      <li><a href="#tab3">Tab 3</a></li>
+      <li><a href="#tab4">Tab 4</a></li>
+    </ul>
+    <div id="tab1" class="tab-content">
+      <h2>Div 1</h2>
+      
+    </div>
+    <div id="tab2" class="tab-content">
+      <h2>Div 2</h2>
+    
+    </div>
+    <div id="tab3" class="tab-content">
+      <h2>Div 3</h2>
+   
+    </div>
+    <div id="tab4" class="tab-content">
+      <h2>Div 4</h2>
+     
+    </div>
+  </div>
+
+   <script>
+   
+      $("#tabs ul li a").click(function() {
+        $(".tab-content").removeClass("active");
+        $($(this).attr("href")).addClass("active");
+
+        $("#tabs ul li a").removeClass("active");
+        $(this).addClass("active");
+      });
+   
+  </script>
+</body>
+</html>

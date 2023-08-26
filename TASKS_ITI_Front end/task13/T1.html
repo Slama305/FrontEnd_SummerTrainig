@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body onload="Load()">
+    <h2>Change Email Address</h2>
+    <form>
+    <input type="text" placeholder="User Name" id="username" required>
+    <br><br>
+    <input type="email" placeholder="Email" id="useremail" pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,3}" required>
+    <br><br>
+    Remember me:<input type="checkbox" id="remember">
+    <br><br>
+    <input type="submit" onclick="login()" value="Submit">
+    </form>
+
+<script>
+function load()
+{
+    var savedUser=localStorage.getItem("username");
+    var savedEmail=localStorage.getItem("email");
+    var userInput=document.getElementById("username");
+    var emailInput=document.getElementById("useremail");
+    if(savedUser!==null && savedEmail!==null)
+    {
+        userInput.value=savedUser;
+        emailInput.value=savedEmail;
+    }
+    
+}
+
+function login()
+{
+var userInput=document.getElementById("username");
+var emailInput=document.getElementById("useremail");
+var check=document.getElementById("remember");
+if(check.checked)
+{
+var username=userInput.value;
+var email=emailInput.value;
+localStorage.setItem("username",username);
+localStorage.setItem("email",email);
+}
+else
+{
+localStorage.removeItem("username");
+localStorage.removeItem("email");
+}
+}
+
+</script>
+</body>
+</html>
