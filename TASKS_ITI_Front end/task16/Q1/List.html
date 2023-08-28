@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sliding Menu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .menu-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 100vh;
+            background-color: rgb(233 65 87);
+            color: #fff;
+            overflow: hidden;
+            
+        } 
+        .menu-content {
+            padding: 40px;
+        }
+        .sub-menu {
+            display: none;
+           
+            width: 100%;
+            border : 1px solid #fff;
+            color: #fff;
+            padding: 20px;
+        }
+    </style>
+  
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu-content">
+            <h2>Main Item</h2>
+            <div class="menu-item">
+                <h3> Item 1</h3>
+                <div class="sub-menu">
+                   
+                        <h4>Hello</h4>
+                    
+                </div>
+            </div>
+            <div class="menu-item">
+                <h3>Item 2</h3>
+                <div class="sub-menu">
+                    
+                        <h4>Welcome</h4>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+           $('.menu-container').hover(
+    function() {
+    $(this).animate({width:'250px'},300);
+},
+     function(){
+        $(this).animate({width:'40px'},300);
+
+}
+  );
+     $('.menu-item').click(function() {
+       
+       var subMenu = $(this).find('.sub-menu');
+                
+         subMenu.toggle();
+            
+            });
+  });
+    </script>
+  
+</body>
+</html>
